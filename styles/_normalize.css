@@ -1,0 +1,42 @@
+*,
+*:before,
+*:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  font-family: 'GolosText';
+  font-weight: 400;
+  line-height: 110%;
+  color: white;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a,
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
+#root {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
