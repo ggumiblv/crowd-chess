@@ -1,0 +1,59 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.strike-text {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-orange);
+  text-decoration-thickness: 2px;
+}
+
+.semibold-text {
+  font-weight: 600;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* mobile по умолчанию */
+/* .container {
+  padding: 10px;
+}
+
+/* tablet */
+/* @media (min-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+} */
+
+/* laptop */
+/* @media (min-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+} */

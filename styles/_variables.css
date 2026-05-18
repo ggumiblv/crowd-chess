@@ -1,0 +1,18 @@
+:root {
+  --color-black: #1f1f1f;
+  --color-dark: #313131;
+  --color-border-gray: #d0d0d0;
+  --color-gray: #d6d6d6;
+
+  --color-white: #ffffff;
+  --color-beige: #e9ded4;
+
+  --color-orange: #f54932;
+  --color-blue: #3057a2;
+  --color-yellow: #fbce51;
+
+  --font-family-base: 'GolosText', sans-serif;
+  --font-family-accent: 'Merriweather', sans-serif;
+
+  --transition-duration: 250ms;
+}
