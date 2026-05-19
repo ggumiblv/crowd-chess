@@ -48,10 +48,18 @@
         </h3>
 
         <div class="intro__body__buttons">
-          <button aria-label="Перейти к информационному блоку" class="intro__body__button">
+          <button
+            data-js-info-button
+            aria-label="Перейти к информационному блоку"
+            class="intro__body__button"
+          >
             Поддержать <br class="desktop-only" />шахматную мысль
           </button>
-          <button aria-label="Перейти к этапам турнира" class="intro__body__button">
+          <button
+            data-js-stages-button
+            aria-label="Перейти к этапам турнира"
+            class="intro__body__button"
+          >
             Подробнее <br class="desktop-only" />о турнире
           </button>
         </div>
@@ -77,7 +85,7 @@
       </marquee>
     </section>
 
-    <section class="information">
+    <section data-js-information-section class="information">
       <div class="information__header">
         <div class="information__header__block">
           <span class="information__header__text"
@@ -101,46 +109,105 @@
           >гроссмейстера О. Бендера
         </div>
         <div class="information__body__content">
-          <div class="information__body__content-left">
-            <div class="information__body__content-element">Место проведения:</div>
-            <div class="information__body__content-element">Дата и время мероприятия:</div>
-            <div class="information__body__content-element">Стоимость входных билетов:</div>
-            <div class="information__body__content-element">Плата за игру:</div>
-            <div class="information__body__content-element">Взнос на телеграммы:</div>
+          <div class="information__body__content-element">Место проведения:</div>
+          <div class="information__body__content-element semibold-text">Клуб «Картонажник»</div>
+          <div class="information__body__content-element">Дата и время мероприятия:</div>
+          <div class="information__body__content-element semibold-text">
+            22 июня 1927 г. в 18:00
           </div>
-          <div class="information__body__content-right">
-            <div class="information__body__content-element semibold-text">Клуб «Картонажник»</div>
-            <div class="information__body__content-element semibold-text">
-              22 июня 1927 г. в 18:00
-            </div>
-            <div class="information__body__content-element semibold-text">20 коп.</div>
-            <div class="information__body__content-element semibold-text">50 коп.</div>
-            <div class="information__body__content-element semibold-text">
-              <span class="information__body__content-element semibold-text strike-text"
-                >100 руб.</span
-              >
-              21 руб. 16 коп.
-            </div>
+          <div class="information__body__content-element">Стоимость входных билетов:</div>
+          <div class="information__body__content-element semibold-text">20 коп.</div>
+          <div class="information__body__content-element">Плата за игру:</div>
+          <div class="information__body__content-element semibold-text">50 коп.</div>
+          <div class="information__body__content-element">Взнос на телеграммы:</div>
+          <div class="information__body__content-element semibold-text">
+            <span class="information__body__content-element semibold-text strike-text"
+              >100 руб.</span
+            >
+            21 руб. 16 коп.
           </div>
         </div>
         <div class="information__body__link">
-          По всем вопросам обращаться в администрацию к К. Михельсону
+          По всем вопросам обращаться <br class="mobile-only" />в администрацию к К. Михельсону
         </div>
       </div>
     </section>
 
-    <section class="stages">
+    <section data-js-stages-section class="stages">
       <div class="stages__header">
-        <h1 class="stages__header__title"></h1>
-        <span class="stages__header__subtitle"></span>
+        <h1 class="stages__header__title">Этапы преображения <br />Васюков</h1>
+        <span class="stages__header__subtitle">Будущие источники <br />обогащения васюкинцев</span>
       </div>
       <div class="stages__body">
-        <div class="stages__body__content"></div>
-        <img class="stages__body__image" />
+        <img class="stages__body__image" src="./images/plane.webp" />
+
+        <div class="stages__body__content">
+          <div class="stages__body__content-element">
+            <span>1</span>
+            <p>Строительство железнодорожной магистрали Москва-Васюки</p>
+          </div>
+          <div class="stages__body__content-element">
+            <span>2</span>
+            <p>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+          </div>
+          <div class="stages__body__content-element">
+            <span>3</span>
+            <p>
+              Поднятие сельского хозяйства в радиусе <br />на тысячу километров: производство
+              овощей, фруктов, икры, шоколадных конфет
+            </p>
+          </div>
+          <div class="stages__body__content-element">
+            <span>4</span>
+            <p>Строительство дворца <br />для турнира</p>
+          </div>
+          <div class="stages__body__content-element">
+            <span>5</span>
+            <p>Размещение гаражей <br />для гостевого <br />автотранспорта</p>
+          </div>
+          <div class="stages__body__content-element">
+            <span>6</span>
+            <p>
+              Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+            </p>
+          </div>
+          <div class="stages__body__content-element">
+            <span>7</span>
+            <p>
+              Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и
+              дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+            </p>
+          </div>
+        </div>
+
+        <div class="mobile-only">
+          <button class="stages-prev">←</button>
+          <button class="stages-next">→</button>
+        </div>
       </div>
     </section>
 
-    <section class="participants"></section>
+    <section class="participants">
+      <div class="slider">
+        <button class="prev">←</button>
+
+        <div class="slider-window">
+          <div class="slider-track">
+            <div class="card">
+              Хозе-Рауль Капабланка
+              <img src="./images/info.webp" alt="" />
+            </div>
+            <div class="card">Эммануил Ласкер</div>
+            <div class="card">Александр Алехин</div>
+            <div class="card">Арон Нимцович</div>
+            <div class="card">Рихард Рети</div>
+            <div class="card">Остап Бендер</div>
+          </div>
+        </div>
+
+        <button class="next">→</button>
+      </div>
+    </section>
 
     <section class="footer"></section>
   </body>
