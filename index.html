@@ -135,80 +135,235 @@
 
     <section data-js-stages-section class="stages">
       <div class="stages__header">
-        <h1 class="stages__header__title">Этапы преображения <br />Васюков</h1>
-        <span class="stages__header__subtitle">Будущие источники <br />обогащения васюкинцев</span>
+        <h2 class="stages__header__title">Этапы преображения <br />Васюков</h2>
+        <span class="stages__header__subtitle">Будущие источники обогащения васюкинцев</span>
       </div>
       <div class="stages__body">
-        <img class="stages__body__image" src="./images/plane.webp" />
-
-        <div class="stages__body__content">
-          <div class="stages__body__content-element">
-            <span>1</span>
-            <p>Строительство железнодорожной магистрали Москва-Васюки</p>
-          </div>
-          <div class="stages__body__content-element">
-            <span>2</span>
-            <p>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
-          </div>
-          <div class="stages__body__content-element">
-            <span>3</span>
-            <p>
-              Поднятие сельского хозяйства в радиусе <br />на тысячу километров: производство
-              овощей, фруктов, икры, шоколадных конфет
-            </p>
-          </div>
-          <div class="stages__body__content-element">
-            <span>4</span>
-            <p>Строительство дворца <br />для турнира</p>
-          </div>
-          <div class="stages__body__content-element">
-            <span>5</span>
-            <p>Размещение гаражей <br />для гостевого <br />автотранспорта</p>
-          </div>
-          <div class="stages__body__content-element">
-            <span>6</span>
-            <p>
-              Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
-            </p>
-          </div>
-          <div class="stages__body__content-element">
-            <span>7</span>
-            <p>
-              Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и
-              дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
-            </p>
-          </div>
+        <div class="stages__body__image">
+          <img class="stages__body__image-item" src="./images/plane.webp" />
         </div>
-
-        <div class="mobile-only">
-          <button class="stages-prev">←</button>
-          <button class="stages-next">→</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="participants">
-      <div class="slider">
-        <button class="prev">←</button>
-
-        <div class="slider-window">
-          <div class="slider-track">
-            <div class="card">
-              Хозе-Рауль Капабланка
-              <img src="./images/info.webp" alt="" />
+        <div class="stages__body__container">
+          <div data-js-stages-track class="stages__body__content">
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>1</span>
+              <p>Строительство железнодорожной магистрали Москва-Васюки</p>
             </div>
-            <div class="card">Эммануил Ласкер</div>
-            <div class="card">Александр Алехин</div>
-            <div class="card">Арон Нимцович</div>
-            <div class="card">Рихард Рети</div>
-            <div class="card">Остап Бендер</div>
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>2</span>
+              <p>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+            </div>
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>3</span>
+              <p>
+                Поднятие сельского хозяйства в радиусе <br />на тысячу километров: производство
+                овощей, фруктов, икры, шоколадных конфет
+              </p>
+            </div>
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>4</span>
+              <p>Строительство дворца <br />для турнира</p>
+            </div>
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>5</span>
+              <p>Размещение гаражей <br />для гостевого <br />автотранспорта</p>
+            </div>
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>6</span>
+              <p>
+                Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+              </p>
+            </div>
+            <div data-js-stages-card class="stages__body__content-element">
+              <span>7</span>
+              <p>
+                Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и
+                дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+              </p>
+            </div>
           </div>
         </div>
 
-        <button class="next">→</button>
+        <div class="stages__controls mobile-only">
+          <button
+            disabled
+            data-js-stages-prev-button
+            class="stages__controls-button stages__controls-button__prev"
+          >
+            <svg
+              class="arrow-icon"
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131" />
+              <path
+                d="M24.5382 30.4615L16.0767 22L24.5382 13.5384"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+            </svg>
+          </button>
+
+          <div data-js-stages-counter class="stages__counter">
+            <span
+              data-js-stages-counter-dot
+              class="stages__counter-dot stages__counter-dot--active"
+            ></span>
+            <span data-js-stages-counter-dot class="stages__counter-dot"></span>
+            <span data-js-stages-counter-dot class="stages__counter-dot"></span>
+            <span data-js-stages-counter-dot class="stages__counter-dot"></span>
+            <span data-js-stages-counter-dot class="stages__counter-dot"></span>
+          </div>
+
+          <button
+            data-js-stages-next-button
+            class="stages__controls-button stages__controls-button__next"
+          >
+            <svg
+              class="arrow-icon"
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="22" cy="22" r="22" fill="#313131" />
+              <path
+                d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
-    <section class="footer"></section>
+    <section data-js-participants-section class="participants">
+      <h2 class="participants__title">Участники турнира</h2>
+      <div class="participants__controls">
+        <button
+          data-js-participants-prev-button
+          class="participants__controls-button participants__controls-button__prev"
+        >
+          <svg
+            class="arrow-icon"
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131" />
+            <path
+              d="M24.5382 30.4615L16.0767 22L24.5382 13.5384"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="square"
+            />
+          </svg>
+        </button>
+
+        <div class="participants__counter">
+          <span data-js-participants-counter-current class="participants__counter-current">1</span>
+          <span class="participants__counter-separator">/</span>
+          <span data-js-participants-counter-total class="participants__counter-total">6</span>
+        </div>
+
+        <button
+          data-js-participants-next-button
+          class="participants__controls-button participants__controls-button__next"
+        >
+          <svg
+            class="arrow-icon"
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="22" cy="22" r="22" fill="#313131" />
+            <path
+              d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="square"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="participants__slider">
+        <div class="participants__slider-container">
+          <div data-js-slider-track class="participants__slider-track">
+            <div data-js-slider-card class="participants__slider-card">
+              <img src="./images/person.webp" alt="Фотография участника" />
+              <h4>Хозе-Рауль Капабланка</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button>Подробнее</button>
+            </div>
+            <div data-js-slider-card class="participants__slider-card">
+              <img src="./images/person.webp" alt="Фотография участника" />
+              <h4>Эммануил Ласкер</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button>Подробнее</button>
+            </div>
+            <div data-js-slider-card class="participants__slider-card">
+              <img src="./images/person.webp" alt="Фотография участника" />
+              <h4>Александр Алехин</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button>Подробнее</button>
+            </div>
+            <div data-js-slider-card class="participants__slider-card">
+              <img src="./images/person.webp" alt="Фотография участника" />
+              <h4>Арон Нимцович</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button>Подробнее</button>
+            </div>
+            <div data-js-slider-card class="participants__slider-card">
+              <img src="./images/person.webp" alt="Фотография участника" />
+              <h4>Рихард Рети</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button>Подробнее</button>
+            </div>
+            <div data-js-slider-card class="participants__slider-card">
+              <img src="./images/person.webp" alt="Фотография участника" />
+              <h4>Остап Бендер</h4>
+              <p>Чемпион мира по шахматам</p>
+              <button>Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <marquee class="intro__running-line" direction="right" scrollamount="10">
+        <div class="intro__running-line__content">
+          <span class="intro__running-line__content__text">
+            Дело помощи утопающим — дело рук самих утопающих!
+          </span>
+          <span class="intro__running-line__content__dot"></span>
+
+          <span class="intro__running-line__content__text">
+            Шахматы двигают вперед не только культуру, но и экономику!
+          </span>
+          <span class="intro__running-line__content__dot"></span>
+
+          <span class="intro__running-line__content__text">
+            Лед тронулся, господа присяжные заседатели!
+          </span>
+          <span class="intro__running-line__content__dot"></span>
+        </div>
+      </marquee>
+      <p class="footer__text">
+        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С
+        подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова
+        «Двенадцать стульев».
+      </p>
+    </section>
   </body>
 </html>

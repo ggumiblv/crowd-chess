@@ -1,65 +1,107 @@
 export default function participants() {
-  const slider = document.querySelector('.slider');
+  const slider = document.querySelector('[data-js-participants-section]');
+
   if (!slider) return;
 
-  const track = slider.querySelector('.slider-track');
+  const track = slider.querySelector('[data-js-slider-track]');
 
-  const nextBtn = slider.querySelector('.next');
-  const prevBtn = slider.querySelector('.prev');
+  const cards = slider.querySelectorAll('[data-js-slider-card]');
 
-  const cards = slider.querySelectorAll('.card');
+  const nextBtn = slider.querySelector('[data-js-participants-next-button]');
+  const prevBtn = slider.querySelector('[data-js-participants-prev-button]');
 
-  const cardsPerSlide = 3;
-  const autoSlideDelay = 4000;
+  const currentEl = slider.querySelector('[data-js-participants-counter-current]');
+  const totalEl = slider.querySelector('[data-js-participants-counter-total]');
 
-  let currentSlide = 0;
+  const AUTO_DELAY = 4000;
 
-  // сколько всего "страниц"
-  const totalSlides = Math.ceil(cards.length / cardsPerSlide);
+  let currentIndex = 0;
+  let autoSlide;
 
-  // ширина одной страницы
-  function getSlideWidth() {
-    return slider.querySelector('.slider-window').offsetWidth;
+  function getCardsPerView() {
+    if (window.innerWidth <= 845) {
+      return 1;
+    } else if (window.innerWidth <= 1330) {
+      return 2;
+    } else return 3;
   }
 
-  // обновление позиции
+  function getCardWidth() {
+    const card = cards[0];
+    const gap = 20;
+
+    return card.offsetWidth + gap;
+  }
+
   function updateSlider() {
-    const offset = currentSlide * getSlideWidth();
+    const cardsPerView = getCardsPerView();
+
+    const offset = currentIndex * getCardWidth();
 
     track.style.transform = `translateX(-${offset}px)`;
+
+    if (cardsPerView === 1) {
+      currentEl.textContent = currentIndex + 1;
+    } else {
+      currentEl.textContent = Math.min(currentIndex + cardsPerView, cards.length);
+    }
+
+    totalEl.textContent = cards.length;
   }
 
-  // next
   function nextSlide() {
-    currentSlide++;
+    const cardsPerView = getCardsPerView();
 
-    if (currentSlide >= totalSlides) {
-      currentSlide = 0;
+    currentIndex++;
+
+    if (currentIndex > cards.length - cardsPerView) {
+      currentIndex = 0;
     }
 
     updateSlider();
   }
 
-  // prev
   function prevSlide() {
-    currentSlide--;
+    const cardsPerView = getCardsPerView();
 
-    if (currentSlide < 0) {
-      currentSlide = totalSlides - 1;
+    currentIndex--;
+
+    if (currentIndex < 0) {
+      currentIndex = cards.length - cardsPerView;
     }
 
     updateSlider();
   }
 
-  // кнопки
-  nextBtn?.addEventListener('click', nextSlide);
-  prevBtn?.addEventListener('click', prevSlide);
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, AUTO_DELAY);
+  }
 
-  // автопереключение
-  setInterval(nextSlide, autoSlideDelay);
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
 
-  // адаптивность
-  window.addEventListener('resize', updateSlider);
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  window.addEventListener('resize', () => {
+    currentIndex = 0;
+
+    updateSlider();
+  });
 
   updateSlider();
+
+  startAutoSlide();
 }

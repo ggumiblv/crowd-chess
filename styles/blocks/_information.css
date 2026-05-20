@@ -75,20 +75,25 @@
 .information__body__content-element {
   padding-block: 16px;
 }
+
 .information__body__content-element:nth-child(odd) {
   border-right: 2px solid var(--color-border-gray);
   opacity: 0.7;
 }
+
 .information__body__content-element:nth-child(odd) {
   border-right: 2px solid var(--color-border-gray);
 }
+
 .information__body__content-element:nth-child(even) {
   padding-left: 16px;
 }
+
 .information__body__content-element:nth-child(odd).strike-text {
   border-right: 2px solid transparent;
   opacity: 1;
 }
+
 .information__body__content-element:not(:last-child):not(:nth-child(9)) {
   border-bottom: 2px solid var(--color-border-gray);
 }
@@ -105,6 +110,7 @@
   .information__body__content {
     margin-top: 0px;
   }
+
   .information__header__text {
     font-size: 28px;
   }
@@ -118,6 +124,7 @@
   .information__body__content-element {
     font-size: 16px;
   }
+
   .information__body__link {
     margin-top: 0px;
     font-size: 16px;
@@ -128,6 +135,7 @@
   .information__header {
     gap: 0px;
   }
+
   .information__body {
     grid-template-columns: auto;
     grid-column-gap: 17px;
@@ -164,20 +172,25 @@
   .information__body__content {
     margin: 28px auto 0px;
   }
+
   .information__body__content-element {
     width: 100%;
     height: auto;
     padding: 0;
   }
+
   .information__body__content-element:not(:last-child):not(:nth-child(9)) {
     border-bottom: 2px solid transparent;
   }
+
   .information__body__content-element:nth-child(even) {
     padding: 12px 0 16px;
   }
+
   .information__body__content-element:nth-child(even):not(:last-child) {
     border-bottom: 2px solid var(--color-border-gray);
   }
+
   .information__body__content-element:nth-child(odd) {
     padding-top: 16px;
     border-right: 2px solid transparent;
@@ -210,12 +223,15 @@
     width: 100%;
     height: auto;
   }
+
   .information__body__title {
     padding-inline: 20px;
   }
+
   .information__body__content {
     padding-inline: 20px;
   }
+
   .information__body__link {
     padding-inline: 20px;
     font-size: 18px;

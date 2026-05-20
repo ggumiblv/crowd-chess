@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+  background-color: var(--color-beige);
+}
+.footer .intro__running-line {
+  top: 0;
+}
+
+.footer__text {
+  max-width: 1366px;
+  margin: auto;
+  font-size: 16px;
+  opacity: 0.6;
+  padding: 100px 72px;
+}
+
+@media (max-width: 600px) {
+  .footer__text {
+    padding: 78px 20px 60px;
+  }
+}
