@@ -30,11 +30,11 @@
   bottom: -55px;
   right: 32%;
   transition: transform 300ms ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 .intro__background__chess-horse:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(-10px);
 }
 
 .intro__background__chess-pawn {
@@ -44,11 +44,11 @@
   bottom: 0px;
   right: 16%;
   transition: transform 300ms ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 .intro__background__chess-pawn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .intro__body {
@@ -71,7 +71,7 @@
 }
 
 .intro__body__title {
-  width: 542px;
+  width: 543px;
 }
 
 .intro__body__title-element {
@@ -85,6 +85,7 @@
 
 .intro__body__title-element:first-of-type {
   -webkit-text-stroke: 1px black;
+  letter-spacing: -1px;
 }
 
 .intro__body__title-element:nth-of-type(2) {
@@ -95,6 +96,7 @@
 .intro__body__title-element:last-of-type {
   display: block;
   text-align: end;
+  letter-spacing: -0.5px;
 }
 
 .intro__body__subtitle {
@@ -125,7 +127,7 @@
   color: var(--color-black);
   border: 2px solid var(--color-black);
   cursor: pointer;
-  transition: all 250ms ease-in-out;
+  transition: all var(--transition-duration) ease-in-out;
 }
 
 .intro__body__button:first-of-type {

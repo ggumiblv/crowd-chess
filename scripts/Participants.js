@@ -1,20 +1,21 @@
 export default function participants() {
-  const slider = document.querySelector('[data-js-participants-section]');
+  const section = document.querySelector('[data-js-participants-section]');
 
-  if (!slider) return;
+  if (!section) return;
 
-  const track = slider.querySelector('[data-js-slider-track]');
+  const track = section.querySelector('[data-js-participants-track]');
 
-  const cards = slider.querySelectorAll('[data-js-slider-card]');
+  const cards = section.querySelectorAll('[data-js-participants-card]');
 
-  const nextBtn = slider.querySelector('[data-js-participants-next-button]');
-  const prevBtn = slider.querySelector('[data-js-participants-prev-button]');
+  const nextBtn = section.querySelector('[data-js-participants-next-button]');
+  const prevBtn = section.querySelector('[data-js-participants-prev-button]');
 
-  const currentEl = slider.querySelector('[data-js-participants-counter-current]');
-  const totalEl = slider.querySelector('[data-js-participants-counter-total]');
+  const currentEl = section.querySelector('[data-js-participants-counter-current]');
+  const totalEl = section.querySelector('[data-js-participants-counter-total]');
+
+  if (!track || !cards.length) return;
 
   const AUTO_DELAY = 4000;
-
   let currentIndex = 0;
   let autoSlide;
 
@@ -102,6 +103,5 @@ export default function participants() {
   });
 
   updateSlider();
-
   startAutoSlide();
 }

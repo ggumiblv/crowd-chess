@@ -38,6 +38,7 @@
   grid-column-gap: 17px;
   grid-row-gap: 0px;
   padding-inline: 45px 75px;
+  margin-top: 17px;
 }
 
 .information__body__title {
@@ -62,7 +63,7 @@
   flex-wrap: wrap;
   height: fit-content;
   max-width: 704px;
-  margin-top: 60px;
+  margin-top: 28px;
   grid-area: 2 / 2 / 3 / 3;
 }
 
@@ -100,10 +101,11 @@
 
 .information__body__link {
   height: fit-content;
-  margin-top: 48px;
+  margin-top: 32px;
   font-size: 20px;
   color: var(--color-blue);
   grid-area: 3 / 2 / 4 / 3;
+  letter-spacing: -0.2px;
 }
 
 @media (max-width: 1125px) {

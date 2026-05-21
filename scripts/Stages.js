@@ -1,17 +1,14 @@
 export default function initStagesSlider() {
-  const slider = document.querySelector('[data-js-stages-section]');
+  const section = document.querySelector('[data-js-stages-section]');
 
-  if (!slider) return;
+  if (!section) return;
 
-  const track = slider.querySelector('[data-js-stages-track]');
-  const cards = slider.querySelectorAll('[data-js-stages-card]');
-  const progressDots = slider.querySelectorAll('[data-js-stages-counter-dot]');
+  const track = section.querySelector('[data-js-stages-track]');
+  const cards = section.querySelectorAll('[data-js-stages-card]');
+  const progressDots = section.querySelectorAll('[data-js-stages-counter-dot]');
 
-  const nextBtn = slider.querySelector('[data-js-stages-next-button]');
-  const prevBtn = slider.querySelector('[data-js-stages-prev-button]');
-
-  const currentEl = slider.querySelector('[data-js-stages-counter-current]');
-  const totalEl = slider.querySelector('[data-js-stages-counter-total]');
+  const nextBtn = section.querySelector('[data-js-stages-next-button]');
+  const prevBtn = section.querySelector('[data-js-stages-prev-button]');
 
   if (!track || !cards.length) return;
 
@@ -19,7 +16,8 @@ export default function initStagesSlider() {
   const PAGES_COUNT = 5;
 
   function getSlideWidth() {
-    return cards[0].offsetWidth;
+    const gap = 20;
+    return cards[0].offsetWidth + gap;
   }
 
   function updateButtons() {
@@ -28,7 +26,6 @@ export default function initStagesSlider() {
   }
 
   function updateSlider() {
-    console.log(progressDots[0]);
     const offset = currentIndex * getSlideWidth();
 
     track.style.transform = `translateX(-${offset}px)`;

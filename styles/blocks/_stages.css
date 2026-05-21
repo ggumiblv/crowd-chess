@@ -1,6 +1,6 @@
 .stages {
   position: relative;
-  padding: 100px 72px;
+  padding: 80px 72px;
   max-width: 1366px;
   margin: auto;
 }
@@ -13,6 +13,7 @@
   font-family: var(--font-family-accent);
   font-size: 54px;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .stages__header__subtitle {
@@ -22,6 +23,7 @@
   width: 280px;
   font-size: 20px;
   color: var(--color-blue);
+  letter-spacing: -0.2px;
 }
 
 .stages__body__container {
@@ -121,7 +123,7 @@
 }
 
 .stages__controls-button .arrow-icon circle {
-  transition: all 250ms ease-in-out;
+  transition: all var(--transition-duration) ease-in-out;
 }
 
 .stages__controls-button:hover .arrow-icon circle {
@@ -148,7 +150,7 @@
   height: 10px;
   border-radius: 50%;
   background-color: var(--color-gray);
-  transition: background-color 250ms ease-in-out;
+  transition: background-color var(--transition-duration) ease-in-out;
 }
 
 .stages__counter-dot--active {
@@ -300,6 +302,7 @@
 
   .stages__body__content {
     padding-inline: 20px;
+    grid-column-gap: 20px;
   }
 
   .stages__body__content-element {
